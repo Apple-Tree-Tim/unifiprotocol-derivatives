@@ -1,0 +1,48 @@
+.LanguageSelector {
+  width: 10rem;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 3px;
+  outline: none;
+
+  &__control {
+    background-color: transparent !important;
+    backdrop-filter: blur(2px);
+
+    &--is-focused,
+    &--menu-is-open {
+      box-shadow: 0 0 1px #000 !important;
+    }
+  }
+
+  &__single-value {
+    width: 70%;
+
+    > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__menu-list {
+    background: transparent;
+  }
+
+  &__option {
+    background: transparent;
+
+    > div {
+      width: 70%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .LanguageSelector {
+    display: none;
+  }
+}

@@ -1,0 +1,52 @@
+@import 'Styles/_colors.scss';
+
+.Table {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 0.7rem;
+  font-size: 0.85rem;
+
+  th,
+  td {
+    text-align: left;
+    padding: 0.5rem 1rem;
+  }
+
+  tr {
+    padding: 0 1rem;
+  }
+
+  th {
+    color: $grey;
+    font-weight: 500;
+    font-size: 0.75rem;
+  }
+
+  .table-row {
+    color: rgba(0, 0, 0, 0.75);
+    td {
+      padding: 0.5rem 1rem;
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    .Table {
+      tr {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: row;
+        flex-wrap: wrap;
+        margin: 0.5rem 0;
+        border: 1px solid rgba(3, 3, 3, 0.2);
+      }
+
+      td,
+      th {
+        flex: 1 1 150px;
+        border: 0.5px solid rgba(3, 3, 3, 0.2);
+      }
+    }
+  }
+}

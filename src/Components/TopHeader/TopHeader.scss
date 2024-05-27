@@ -1,0 +1,42 @@
+@import 'Styles/_colors.scss';
+
+.TopHeader {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  font-size: 0.9rem;
+
+  > span {
+    display: flex;
+
+    > * {
+      margin: 0 0.75rem;
+    }
+  }
+
+  .TopHeader-Button {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 0.5rem 1rem;
+    backdrop-filter: blur(2px);
+    border-radius: 3px;
+    backdrop-filter: blur(2px);
+    transition: background 0.3s linear;
+
+    &:hover {
+      background: #fff;
+    }
+
+    &.Logout {
+      background: transparentize($pink, 0.15);
+      padding: 0.5rem 2rem;
+
+      &:hover {
+        background: transparentize($light-pink, 0.15);
+      }
+    }
+  }
+}

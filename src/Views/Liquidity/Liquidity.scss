@@ -1,0 +1,64 @@
+@import 'Styles/_colors.scss';
+
+.Liquidity {
+  @media only screen and (max-width: 480px) {
+    margin: 1rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+  }
+  @media only screen and (min-width: 481px) {
+    padding: 0 8rem;
+    padding-bottom: 5rem;
+  }
+
+  &__header {
+    display: flex;
+    font-weight: 300;
+    text-align: justify;
+
+    > svg {
+      height: auto;
+      width: 20rem;
+      margin-right: 2rem;
+      fill: $primary-theme;
+    }
+  }
+
+  &__selectors {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    &__selector {
+      margin: 0.5rem;
+      border: 1px solid $light-purple;
+      width: 7rem;
+      height: 9rem;
+      transition: border 0.3s ease;
+      font-size: 0.7rem;
+      font-weight: 500;
+      padding: 0.2rem;
+
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      > div {
+        height: 4rem;
+        margin: 1rem 0;
+      }
+
+      svg {
+        height: 2.5rem;
+        width: auto;
+        fill: $primary-theme;
+      }
+
+      &:hover {
+        border-color: #000;
+      }
+    }
+  }
+}

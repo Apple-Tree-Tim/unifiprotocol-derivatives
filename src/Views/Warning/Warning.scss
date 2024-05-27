@@ -1,0 +1,66 @@
+@import 'Styles/_colors.scss';
+
+@media only screen and (max-width: 480px) {
+  h1 {
+    display: inline-block;
+    font-size: 1.5rem;
+  }
+}
+.Warning {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: justify;
+
+  ol {
+    li {
+      margin: 0.75rem 0;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: flex-start;
+    padding: 0 6rem;
+    font-weight: 300;
+
+    > svg {
+      height: auto;
+      width: 10rem;
+      margin-right: 2rem;
+      fill: $primary-theme;
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    margin: 0 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: justify;
+
+    &__header {
+      font-weight: 300;
+      margin-top: 36px;
+
+      > svg {
+        height: auto;
+        margin-left: 1.5rem;
+        width: 3rem;
+        margin-right: 1rem;
+        display: inline-block !important;
+        justify-content: center !important;
+        vertical-align: middle;
+        fill: $primary-theme;
+      }
+    }
+  }
+}
+
+.Warning-Button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

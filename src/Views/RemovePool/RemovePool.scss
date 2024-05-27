@@ -1,0 +1,89 @@
+@import 'Styles/_colors.scss';
+
+@media only screen and (max-width: 480px){
+.RemovePool {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top:40px;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+    font-weight: 300;
+
+    > img {
+      width: 10rem;
+      height: auto;
+      margin-left:25%;
+    }
+  }
+
+  &__table {
+    width: 100%;
+    margin: 2rem 0;
+
+    .Table {
+      background: $light-grey;
+      width: 100%;
+      padding: 0 2rem;
+    }
+
+    .column-right {
+      text-align: right;
+    }
+  }
+}
+
+.Pool-Button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+ }
+}
+
+@media only screen and (min-width: 481px){
+.RemovePool {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: justify;
+
+  &__header {
+    display: flex;
+    padding: 0 8rem;
+    font-weight: 300;
+
+    > img {
+      width: auto;
+      height: 10rem;
+    }
+  }
+
+  &__table {
+    width: 100%;
+    margin: 2rem 0;
+
+    .Table {
+      background: $light-grey;
+      margin: 0 -2rem;
+      width: calc(100% + 4rem);
+      padding: 0 8rem;
+    }
+
+    .column-right {
+      text-align: right;
+    }
+  }
+}
+
+.Pool-Button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+ }
+}

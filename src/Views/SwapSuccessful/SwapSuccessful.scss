@@ -1,0 +1,158 @@
+@import 'Styles/_colors.scss';
+
+@media only screen and (max-width: 480px) {
+  .SwapSuccessful {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    margin-top: 40px;
+
+    h1 {
+      color: $dark-purple !important;
+      font-size: 20px;
+    }
+
+    &__icon {
+      > svg {
+        height: 10rem;
+        width: auto;
+        fill: $primary-theme;
+      }
+    }
+
+    &__blockchain-explorer {
+      overflow-wrap: anywhere;
+      margin: 0 1.5rem;
+      margin-bottom: 1.5rem;
+      a {
+        color: $grey !important;
+        text-decoration: underline !important;
+      }
+    }
+
+    &__summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 100%;
+      padding: 0 10rem;
+      font-size: 10px;
+
+      &__received {
+        margin-right: 2em;
+      }
+
+      .summary-detail {
+        display: flex;
+        margin: 2rem 0;
+
+        &__logo {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0 1rem;
+
+          > * {
+            width: 3rem;
+            height: 3rem;
+          }
+        }
+
+        &__reward {
+          display: flex;
+          flex-direction: column;
+          padding: 2rem 0;
+
+          &__flow {
+            font-size: 0.7rem;
+            color: $grey;
+          }
+        }
+      }
+
+      &__arrow {
+        margin: 0 1rem;
+        > svg {
+          fill: $primary-theme;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 481px) {
+  .SwapSuccessful {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+
+    h1 {
+      color: $dark-purple !important;
+    }
+
+    &__icon {
+      > svg {
+        height: 10rem;
+        width: auto;
+        fill: $primary-theme;
+      }
+    }
+
+    &__blockchain-explorer {
+      margin-bottom: 1.5rem;
+      a {
+        color: $grey !important;
+        text-decoration: underline !important;
+      }
+    }
+
+    &__summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 100%;
+      padding: 0 10rem;
+
+      .summary-detail {
+        display: flex;
+        margin: 2rem 0;
+
+        &__logo {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0 1rem;
+
+          > * {
+            width: 3rem;
+            height: 3rem;
+          }
+        }
+
+        &__reward {
+          display: flex;
+          flex-direction: column;
+          padding: 2rem 0;
+
+          &__flow {
+            font-size: 0.7rem;
+            color: $grey;
+          }
+        }
+      }
+
+      &__arrow {
+        margin: 0 1rem;
+        > svg {
+          fill: $primary-theme;
+        }
+      }
+    }
+  }
+}

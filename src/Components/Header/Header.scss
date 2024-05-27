@@ -1,0 +1,116 @@
+@import 'Styles/_colors';
+
+.Header {
+  @media only screen and (min-width: 481px) {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 5.5rem;
+
+    &__connection {
+      display: flex;
+      align-items: center;
+      padding: 0 1rem;
+      height: 100%;
+
+      .Button {
+        height: 2.5rem;
+        min-width: 10rem;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    align-items: center;
+    height: 5.5rem;
+
+    &__connection {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      margin-top: 1em;
+
+      .Button {
+        height: 2.5rem;
+        min-width: 10rem;
+      }
+    }
+  }
+
+  &__logo {
+    @media only screen and (max-width: 480px) {
+      justify-content: center;
+    }
+    display: flex;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    padding: 0rem 2rem;
+
+    svg {
+      width: 2.5rem;
+      height: auto;
+    }
+  }
+
+  &__nav {
+    @media only screen and (min-width: 481px) {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      width: 100%;
+      justify-content: flex-end;
+
+      a {
+        color: #000 !important;
+        font-size: 0.8rem;
+        padding: 0 2rem;
+      }
+    }
+    @media only screen and (max-width: 480px) {
+      display: flex;
+      height: 100%;
+      justify-content: space-between;
+    }
+
+    > div {
+      display: flex;
+      height: 100%;
+      margin: 0 0.5rem;
+      transition: border 0.2s linear;
+
+      &.active {
+        border-bottom: 2px solid $primary-theme;
+      }
+
+      &.no-active {
+        border-bottom: 2px solid transparent;
+      }
+      @media only screen and (min-width: 481px) {
+        button {
+          padding: 0.25rem 1rem;
+        }
+      }
+      @media only screen and (max-width: 480px) {
+        button {
+          padding: 0.25rem 1rem 0.25rem 0.6rem;
+        }
+      }
+    }
+  }
+
+  .Button {
+    svg {
+      fill: $primary-theme;
+    }
+  }
+
+  .anchor-wallet {
+    color: #000;
+  }
+}

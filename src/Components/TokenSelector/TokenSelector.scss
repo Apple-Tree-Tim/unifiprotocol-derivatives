@@ -1,0 +1,74 @@
+@import 'Styles/_colors.scss';
+
+@mixin token-size {
+  display: flex;
+  align-items: center;
+
+  > img {
+    height: auto;
+    width: 22px;
+    margin-right: 1rem;
+  }
+
+  > svg {
+    height: auto;
+    width: 22px;
+    margin-right: 1rem;
+  }
+}
+
+@mixin font-style {
+  color: #000;
+  font-weight: 500;
+}
+
+.TokenSelector {
+  width: 12rem;
+
+  &__control {
+    background-color: $primary-theme !important;
+
+    &:hover {
+      border-color: $dark-purple !important;
+    }
+
+    &--is-focused,
+    &--menu-is-open {
+      box-shadow: 0 0 1px $dark-purple !important;
+    }
+  }
+
+  .TokenSelector__menu-list {
+    background: $primary-theme;
+  }
+
+  .TokenSelector__option {
+    @include token-size();
+
+    background: $primary-theme;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: $light-purple;
+    }
+
+    &.TokenSelector__option--is-selected {
+      @include font-style();
+      background: $light-purple;
+    }
+  }
+
+  .TokenSelector__single-value {
+    @include token-size();
+    @include font-style();
+  }
+
+  .TokenSelector__indicator-separator {
+    border-color: #000 !important;
+    background-color: rgba(0, 0, 0, 0.7) !important;
+  }
+
+  .TokenSelector__indicator svg {
+    fill: rgba(0, 0, 0, 0.7) !important;
+  }
+}

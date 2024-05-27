@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Transfer SEED</title>
+    <!-- Compiled and minified CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+  </head>
+  <body>
+    <h1>SEED transfer benchmark</h1>
+
+    <ul id="infoList"></ul>
+
+    <h3>Address to</h3>
+    <input type="text" id="addressTo" placeholder="Type here the address..." />
+    <input type="text" id="amount" placeholder="Type here the amount..." />
+    <button class="waves-effect waves-light btn" onclick="sendSeedTokens()">
+      Transfer
+    </button>
+
+    <p></p>
+    <p></p>
+
+    <div
+      id="results"
+      style="height: 20rem; border: 1px solid #999; white-space: pre;"
+    >
+      Info will be displayed here once the transactions has been done
+    </div>
+
+    <script>
+      let tronweb
+      let address
+      let tronLinkLoaded = false
+      let isMainnet = true
+
+      const precision = 1000000
+
+      const mainnetSeedAddress = 'TBwoSTyywvLrgjSgaatxrBhxt3DGpVuENh'
+      const testnetSeedAddress = 'TKzmmzhd1smMtqBf8aUvknNi9ue4As9QAM'
+
+      const $addressTo = document.querySelector('#addressTo')
+      const $amount = document.querySelector('#amount')
+      const $results = document.querySelector('#results')
+
+      function getSeedAddress() {
+        return isMainnet ? mainnetSeedAddress : testnetSeedAddress
+      }
+
+      async function sendSeedTokens() {
+        const initTime = Date.now()
+
+        const amount = parseInt($amount.value) * precision
+        const contract = await tronweb.contract().at(getSeedAddress())
+        const send = await contract['transfer']($addressTo.value, amount).send({
+          feeLimit: 100_000_000,
+          shouldPollResponse: true,
+          keepTxID: true
+        })
+        const [hash, success] = send
+        const totalTime = (Date.now() - initTime) / 1000
+
+        $results.innerHTML = JSON.stringify({ success, hash, totalTime }, 0, 4)
+      }
+
+      let catchTronweb = setInterval(async () => {
+        if (window.tronWeb && window.tronWeb.defaultAddress.base58) {
+          clearInterval(catchTronweb)
+          tronLinkLoaded = true
+          address = window.tronWeb.defaultAddress.base58
+          tronweb = window.tronWeb
+          isMainnet = /^https:\/\/api.trongrid/.test(tronWeb.fullNode.host)
+          updateInfoList()
+        }
+      }, 600)
+
+      function updateInfoList() {
+        const $infoList = document.querySelector('#infoList')
+        $infoList.innerHTML = `
+          <li>Network: ${isMainnet ? 'mainnet' : 'testnet'}</li>
+          <li>Your address: ${address}</li>
+          <li>SEED TRC20 address: ${getSeedAddress()}</li>
+          `
+      }
+    </script>
+  </body>
+</html>

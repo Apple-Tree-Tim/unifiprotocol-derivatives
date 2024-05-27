@@ -1,0 +1,22 @@
+.Back {
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  background: #000;
+  padding: 0.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.8s linear;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  svg {
+    height: 2.5rem;
+    width: auto;
+    fill: #fff;
+  }
+}

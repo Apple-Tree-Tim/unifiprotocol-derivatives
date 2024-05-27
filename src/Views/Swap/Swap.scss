@@ -1,0 +1,100 @@
+@import 'Styles/_colors.scss';
+
+.Swap {
+  @media only screen and (max-width: 480px) {
+    h1 {
+      font-size: medium !important;
+    }
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    flex: 1;
+    margin-top: 4rem;
+
+    &__action {
+      width: 100%;
+      margin: 0 1.75rem;
+    }
+
+    &__actions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: auto;
+      &__separator {
+        cursor: pointer;
+
+        svg {
+          color: $primary-theme;
+          width: 3rem;
+          height: auto;
+          margin: 1rem;
+          transform: rotate(90deg);
+        }
+      }
+
+      &__action {
+        width: 100%;
+        margin: 0 1.75rem;
+
+        &__orientation {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 481px) {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    flex: 1;
+
+    &__action {
+      width: 100%;
+      margin: 0 1.75rem;
+    }
+
+    &__actions {
+      display: flex;
+      align-items: center;
+      margin-top: 4rem;
+
+      &__separator {
+        cursor: pointer;
+
+        svg {
+          color: $primary-theme;
+          width: 3rem;
+          height: auto;
+        }
+      }
+
+      &__action {
+        width: 100%;
+        margin: 0 1.75rem;
+
+        &__orientation {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  .Wrapper-Bottom-Button {
+    width: 100% !important;
+  }
+
+  .Input-Container {
+    margin-top: 1rem;
+
+    .Input {
+      margin: 0;
+    }
+  }
+}

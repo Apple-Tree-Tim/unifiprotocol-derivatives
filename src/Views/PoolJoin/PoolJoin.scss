@@ -1,0 +1,168 @@
+@import 'Styles/_colors.scss';
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: larger;
+  }
+  .Input-Container__wrapper__max .Button {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.72rem;
+    margin-bottom: 4px;
+    height: inherit !important;
+  }
+  .PoolJoin {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    margin-top: 40px;
+
+    &__band {
+      background: $light-grey;
+    }
+
+    &__band-summary {
+      .table-row {
+        font-weight: 500;
+      }
+
+      th,
+      td {
+        text-align: center !important;
+      }
+    }
+
+    &__band-liquidity {
+      padding: 1rem 15rem;
+
+      > div {
+        font-weight: 500;
+      }
+
+      .Table {
+        padding: 0 1rem;
+      }
+    }
+
+    &__swap-options {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 3rem 0;
+
+      &__pair {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 1.5rem;
+
+        &__header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 2rem;
+
+          .Button {
+            margin-left: 1rem;
+            height: 2.5rem;
+            width: 8rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+
+        .Input {
+          margin: 0;
+          font-size: 0.68rem;
+        }
+      }
+
+      &__add {
+        svg {
+          height: 2.5rem;
+          width: auto;
+          fill: $primary-theme;
+          margin: 1rem;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 481px) {
+  .PoolJoin {
+    &__band {
+      margin-left: -2rem;
+      width: calc(100% + 4rem);
+      background: $light-grey;
+      padding: 0 8rem;
+    }
+
+    &__band-summary {
+      .table-row {
+        font-weight: 500;
+      }
+
+      th,
+      td {
+        text-align: center !important;
+      }
+    }
+
+    &__band-liquidity {
+      padding: 1rem 15rem;
+
+      > div {
+        font-weight: 500;
+      }
+
+      .Table {
+        padding: 0 1rem;
+      }
+    }
+
+    &__swap-options {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin: 3rem 0;
+
+      &__pair {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 1.5rem;
+
+        &__header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 2rem;
+
+          .Button {
+            margin-left: 1rem;
+            height: 2.5rem;
+            width: 8rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+
+        .Input {
+          margin: 0;
+        }
+      }
+
+      &__add {
+        svg {
+          height: 2.5rem;
+          width: auto;
+          fill: $primary-theme;
+        }
+      }
+    }
+  }
+}

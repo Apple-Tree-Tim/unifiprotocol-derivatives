@@ -1,0 +1,31 @@
+@import 'Styles/_colors.scss';
+
+.Failed-Wrapper {
+  .Failed {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    @media only screen and (max-width: 480px){
+      margin-top:40px;
+    }
+    h1 {
+      color: $dark-pink !important;
+    }
+
+    &__icon {
+      margin-top: 2rem;
+      > svg {
+        height: 10rem;
+        width: auto;
+        fill: $dark-pink;
+      }
+    }
+  }
+
+  .Wrapper-Bottom-Button {
+    margin-top: 3rem !important;
+    width: 100% !important;
+  }
+}

@@ -1,0 +1,38 @@
+@import 'Styles/_colors.scss';
+
+.Input {
+  outline: 0;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border: 0;
+  border-radius: 4px;
+  width: 100%;
+
+  background: $light-grey;
+  color: $dark-grey;
+}
+
+.Input-Container {
+  width: 100%;
+
+  &__balance {
+    text-align: right;
+    font-size: 0.75rem;
+    color: $grey;
+  }
+
+  &__wrapper {
+    position: relative;
+
+    &__max {
+      position: absolute;
+      bottom: 0.5rem;
+      right: 0.5rem;
+
+      .Button {
+        height: 2rem !important;
+        padding: 0.5rem 1rem;
+      }
+    }
+  }
+}

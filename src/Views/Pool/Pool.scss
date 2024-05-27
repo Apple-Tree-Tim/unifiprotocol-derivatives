@@ -1,0 +1,98 @@
+@import 'Styles/_colors.scss';
+
+@media only screen and (max-width: 480px){
+h1{
+  display:inline-block;
+  font-size:1.5rem;
+  }
+}
+.Pool {
+  @media only screen and (max-width: 480px){
+  margin: 0 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; 
+  text-align: justify;
+
+  &__header {
+    font-weight: 300;
+    margin-top: 36px;
+
+    > svg {
+      height: auto;
+      margin-left: 1.5rem;
+      width: 3rem;
+      margin-right: 1rem;
+      display: inline-block !important;
+      justify-content: center !important;
+      vertical-align: middle;
+      fill: $primary-theme;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 481px){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: justify;
+
+    &__header {
+      display: flex;
+      padding: 0 8rem;
+      font-weight: 300;
+  
+      > svg {
+        height: auto;
+        width: 20rem;
+        margin-right: 2rem;
+        fill: $primary-theme;
+      }
+    }
+  }
+    
+
+  
+
+  &__table {
+    width: 100%;
+    margin: 2rem 0;
+    @media only screen and (max-width: 480px){
+    overflow:auto !important;
+    .Button{
+      font-size:8.5px;
+      padding: 0.4rem 1rem;
+    }
+    .Table {
+      background: #eee;
+      width: calc(100% + 4rem);
+      padding: 0 12px;
+      font-size: 10px;
+      }
+    
+      th{
+        font-size:8px;
+      }
+    }
+    @media only screen and (min-width: 481px){
+    .Table {
+      background: $light-grey;
+      margin: 0 -2rem;
+      width: calc(100% + 4rem);
+      padding: 0 4rem;
+    }
+  }
+
+    .column-right {
+      text-align: right;
+    }
+  }
+}
+
+.Pool-Button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

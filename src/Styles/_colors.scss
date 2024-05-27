@@ -1,0 +1,31 @@
+$harmony-primary: #00aee9;
+$harmony-secondary: #4fe7c8;
+$harmony-gradient: linear-gradient(
+  to right top,
+  $harmony-primary,
+  $harmony-secondary
+);
+
+$purple: #8f91ff;
+$dark-purple: darken($purple, 20%);
+$light-purple: lighten($purple, 20%);
+$purple-gradient: linear-gradient(180deg, $light-purple, $dark-purple);
+
+$grey: #999;
+$dark-grey: #666;
+$light-grey: #eee;
+
+$blue: #1da3c9;
+$blue-gradient: linear-gradient(to right top, $blue, lighten($blue, 15%));
+
+$green: #3df997;
+$green-2: #38f997;
+$dark-green: darken($green, 20%);
+$light-green: lighten($green, 30%);
+
+$pink: #fa9191;
+$dark-pink: darken(#fa9191, 15%);
+$light-pink: lighten(#fa9191, 15%);
+
+$primary-theme: $purple;
+$secondary-theme: $purple;

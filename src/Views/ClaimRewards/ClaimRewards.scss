@@ -1,0 +1,68 @@
+@import 'Styles/_colors.scss';
+
+@media only screen and (max-width: 480px) {
+  .ClaimRewards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: justify;
+
+    &__header {
+      display: flex;
+      flex-direction: column;
+      font-weight: 300;
+      padding: 0 2rem;
+      margin-top: 40px;
+      text-align: center;
+
+      > img {
+        height: auto;
+        width: 10rem;
+        margin-left: 24%;
+      }
+    }
+
+    &__summary {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding: 0 1rem;
+      margin: 1rem 0;
+      margin-bottom: 3rem;
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (min-width: 481px) {
+  .ClaimRewards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: justify;
+
+    &__header {
+      display: flex;
+      font-weight: 300;
+      padding: 0 8rem;
+
+      > img {
+        height: auto;
+        width: 10rem;
+      }
+    }
+
+    &__summary {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding: 0 1rem;
+      margin: 1rem 0;
+      margin-bottom: 3rem;
+      width: 100%;
+      padding: 0 8rem;
+    }
+  }
+}

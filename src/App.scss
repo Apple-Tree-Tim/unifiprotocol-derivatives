@@ -1,0 +1,36 @@
+@import 'Styles/_colors.scss';
+
+.App {
+  margin: 0;
+  padding: 0;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  h1 {
+    margin: 0.5rem 0;
+    color: #000;
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  a {
+    color: $dark-purple;
+    text-decoration: none;
+  }
+
+  .text-align-right {
+    text-align: right;
+  }
+
+  .color-green {
+    color: $green;
+  }
+
+  .color-dark-green {
+    color: $dark-green;
+  }
+}

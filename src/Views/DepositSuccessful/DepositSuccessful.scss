@@ -1,0 +1,150 @@
+@import 'Styles/_colors.scss';
+
+@media only screen and (max-width: 480px) {
+  .DepositSuccessful {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    margin-top: 40px;
+
+    h1 {
+      color: $dark-purple !important;
+    }
+
+    &__icon {
+      > svg {
+        height: 10rem;
+        width: auto;
+        fill: $primary-theme;
+      }
+    }
+
+    &__summary {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 0 10rem;
+
+      .summary-detail {
+        display: flex;
+        align-items: center;
+        margin: 2rem 2rem;
+
+        &__logo {
+          display: flex;
+          justify-content: center;
+          margin-right: 0.5rem;
+
+          > * {
+            width: 3rem;
+            height: 3rem;
+          }
+        }
+
+        &__reward {
+          display: flex;
+          flex-direction: column;
+          padding: 2.5rem 0;
+
+          &__flow {
+            font-size: 0.7rem;
+            color: $grey;
+          }
+        }
+      }
+
+      &__arrow {
+        > svg {
+          fill: $primary-theme;
+        }
+      }
+    }
+
+    &__blockchain-explorer {
+      overflow-wrap: anywhere;
+      margin: 0 1.5rem;
+      margin-bottom: 1.5rem;
+      a {
+        color: $grey !important;
+        text-decoration: underline !important;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 481px) {
+  .DepositSuccessful {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+
+    h1 {
+      color: $dark-purple !important;
+    }
+
+    &__icon {
+      > svg {
+        height: 10rem;
+        width: auto;
+        fill: $primary-theme;
+      }
+    }
+
+    &__summary {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 0 10rem;
+
+      .summary-detail {
+        display: flex;
+        align-items: center;
+        margin: 2rem 2rem;
+
+        &__logo {
+          display: flex;
+          justify-content: center;
+          margin-right: 0.5rem;
+
+          > * {
+            width: 3rem;
+            height: 3rem;
+          }
+        }
+
+        &__reward {
+          display: flex;
+          flex-direction: column;
+          padding: 2.5rem 0;
+
+          &__flow {
+            font-size: 0.7rem;
+            color: $grey;
+          }
+        }
+      }
+
+      &__arrow {
+        > svg {
+          fill: $primary-theme;
+        }
+      }
+    }
+
+    &__blockchain-explorer {
+      margin-bottom: 1.5rem;
+      a {
+        color: $grey !important;
+        text-decoration: underline !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@import 'Styles/_colors.scss';
+
+.ClaimSuccessful {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+
+  h1 {
+    color: $green-2 !important;
+  }
+
+  &__icon {
+    > svg {
+      height: 10rem;
+      width: auto;
+      fill: $green;
+    }
+  }
+
+  &__summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0 20rem;
+
+    .summary-detail {
+      display: flex;
+      margin: 2rem 0;
+
+      &__logo {
+        display: flex;
+        justify-content: center;
+
+        > * {
+          width: 50%;
+          height: auto;
+        }
+      }
+
+      &__reward {
+        display: flex;
+        flex-direction: column;
+        padding: 2.5rem 0;
+
+        &__flow {
+          font-size: 0.7rem;
+          color: $grey;
+        }
+      }
+    }
+
+    &__arrow {
+      > svg {
+        fill: $green;
+      }
+    }
+  }
+}

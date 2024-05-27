@@ -1,0 +1,114 @@
+@import 'Styles/_colors';
+
+.Container {
+  height: 100vh;
+  z-index: 10;
+  position: relative;
+
+  @media only screen and (min-width: 481px){
+  &__content {
+    top: calc(15%);
+    z-index: 1;
+    background: #fff;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 2px;
+    min-width: 900px;
+    max-width: 900px;
+    min-height: 40vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 3rem;
+  }
+}
+
+  @media only screen and (max-width: 480px){
+    &__content {
+    z-index: 1;
+    background: #fff;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 2px;
+    width:100%;
+    padding-bottom:60px;
+    min-height: 40vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    }
+  }
+  .Wrapper {
+
+    @media only screen and (max-width: 480px){
+    margin-top:88px;
+    color: #000;
+    position: relative;
+    // overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    // padding: 0rem 2rem 1rem 2rem;
+    font-size: 0.8rem;
+    }
+
+
+    @media only screen and (min-width: 481px){
+      color: #000;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 1;
+      width: 100%;
+      height: 100%;
+      padding: 0rem 2rem 1rem 2rem;
+      font-size: 0.8rem;
+      }
+      
+
+    .slide-enter,
+    .slide-exit {
+      transition: transform 300ms ease-out, opacity 150ms ease-out;
+    }
+
+    .slide-enter {
+      transform: translateX(100%);
+      opacity: 1;
+    }
+
+    .slide-enter.slide-enter-active {
+      transform: translateX(0%);
+    }
+
+    .slide-exit {
+      position: absolute;
+      top: 2rem;
+      left: 0;
+      width: 100%;
+      transform: translateX(0%);
+      opacity: 0;
+    }
+
+    .slide-exit-active {
+      transform: translateX(-100%);
+    }
+  }
+
+  .Wrapper-Bottom-Button {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom:1rem;
+    height: 3rem;
+    width: 100%;
+
+    .Back {
+      margin-right: 0.5rem;
+    }
+  }
+}
